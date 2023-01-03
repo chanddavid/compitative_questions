@@ -28,3 +28,22 @@ else:
 
 # Time Complexity: O(nlogn)
 # Space Complexity: O(1)
+
+
+arr=[1,2,3,7,6]
+target=10
+
+start=0
+end=len(arr)-1
+def func(start,end,target):
+    if (arr[start]+arr[end])>target:
+        end=end-1
+        return func(start,end,target)
+    elif(arr[start]+arr[end])<target:
+        start=start+1
+        return func(start,end,target)
+    else:
+        return arr.index(arr[start]),arr.index(arr[end])
+
+x=func(start,end,target)
+print(x)              

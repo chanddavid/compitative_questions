@@ -11,7 +11,7 @@ def twoNumberSum(array, targetSum):
     return []
 
 a = [1,2,3,4,5]
-target = 5
+target = 12
 
 result = twoNumberSum(a,target)
 
